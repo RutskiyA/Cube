@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #282828;
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1200px;
+}
+.pip {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+}
+.cube{
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 10%;
+    box-shadow:  inset 0px -2px 2px 3px rgba(168, 153, 168, 1),
+    10px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    transition-duration: 1s;
+}
+.cube:hover {
+    box-shadow:  inset 0px -2px 2px 3px rgba(168, 153, 168, 1);
+}
+ .first-cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-delay: 0.1s;
+}
+.second-cube {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: 0.5s;
+}
+.second-cube .pip:nth-of-type(2) {
+    align-self: flex-end;
+  }
+.third-cube {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: 0.9s;
+}
+.third-cube .pip:nth-of-type(2) {
+    align-self: center;
+  }
+.third-cube .pip:nth-of-type(3) {
+    align-self: flex-end;
+  }
+.fourth-cube {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: 1.3s;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fifth-cube {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: 1.7s;
+}
+.column-unikal {
+    align-self: center;
+}
+.sixth-cube {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: 2s;
+}
+/*Animate css*/
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+@-webkit-keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 3000px, 0);
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -5px, 0);
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 3000px, 0);
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -5px, 0);
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+.bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+  }
+@media (max-width: 1366px) {
+    .container {
+        max-width: 960px;
+    }
+    .cube{
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+    }
+    .pip {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width: 992px) {
+  body{
+    overflow: auto;
+  }
+    .container {
+        max-width: 890px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cube{
+        width: 130px;
+        height: 130px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .pip {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media  (max-width: 768px) {
+    body{
+      overflow: auto;
+    }
+    .container{
+        max-width: 675px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cube{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .pip {
+        width: 20px;
+        height: 20px;
+    }
+}
